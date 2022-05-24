@@ -22,11 +22,11 @@ public class Validate {
         String result = "";
 
         if (!operator.matches("[-+*/]{1}")){
-            throw new RuntimeException("OPERATOR NE PRAVNILNIYI");
+            throw new RuntimeException("строка не является математической операцией");
         }
 
         if (isRoman(input1) ^ isRoman(input2)){
-            throw new RuntimeException("ZIFRI RAZNOGO S4ISLENIA");
+            throw new RuntimeException("используются одновременно разные системы счисления");
         }
         if (!isRoman(input1) && !isRoman(input2) && (!isStringInt(input1) || !isStringInt(input1))) {
             throw new RuntimeException("RIMSKIE ZIFRI VNE PREDELOV ili 4ISLA NE ZELIE");
@@ -46,7 +46,7 @@ public class Validate {
         }
 
         if (((op1 < 1) || (op1 > 10)) || ((op2 < 1) || (op2 > 10))) {
-            throw new RuntimeException("OPERANDI NE V PREDELAX");
+            throw new RuntimeException("Калькулятор должен принимать на вход числа от 1 до 10");
         }
 
         if (isRoman(input1)) {

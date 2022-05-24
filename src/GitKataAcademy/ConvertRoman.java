@@ -77,7 +77,7 @@ public class ConvertRoman {
     }
     public static String IntegerToRomanNumeral(int input) {
         if (input < 1 || input > 3999)
-            return "Invalid Roman Number Value";
+            return "в римской системе нет отрицательных чисел ИЛИ Калькулятор должен принимать на вход числа от 1 до 10 включительно";
         String s = "";
         while (input >= 1000) {
             s += "M";
