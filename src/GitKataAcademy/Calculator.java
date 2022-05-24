@@ -9,16 +9,16 @@ public class Calculator {
         String outputStr = "";
         int op1, op2 = 0;
 
-        System.out.println("Input: ");
+        System.out.println("Input:");
 
         Scanner scanner = new Scanner(System.in);
-//c
+
         String input1 = scanner.next();
         String operator = scanner.next();
         String input2 = scanner.next();
 
 
-        System.out.println("Output");
+        System.out.println("=");
 
         input1 = input1.toUpperCase();
         input2 = input2.toUpperCase();
@@ -50,12 +50,10 @@ public class Calculator {
                 case "+": result = op1 + op2;
                     break;
                 case "-": result = op1 - op2;
-
                     break;
                 case "/": result = op1 / op2;
                     break;
                 case "*": result = op1 * op2;
-
                     break;
             }
             outputStr = Integer.toString(result);

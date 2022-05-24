@@ -1,9 +1,9 @@
 package GitKataAcademy;
 
 public class Validate {
-
+    // BAJINDATOP
     private boolean isRoman(String inputStr){
-        return inputStr.matches("I,II,III,IV,V,VI,VII,VIII,IX,X");
+        return inputStr.matches("^I$|^II$|^III$|^IV$|^V$|^VI$|^VII$|^VIII$|^IX$|^X$");
     }
 
     private boolean isStringInt(String s)
@@ -22,17 +22,15 @@ public class Validate {
         String result = "";
 
         if (!operator.matches("[-+*/]{1}")){
-            throw new RuntimeException("формат математической операции не удовлетворяет заданию - два операнда и один оператор(+,-,/,*)");
+            throw new RuntimeException("OPERATOR NE PRAVNILNIYI");
         }
 
         if (isRoman(input1) ^ isRoman(input2)){
-            throw new RuntimeException("используются одновременно разные системы счисления");
+            throw new RuntimeException("ZIFRI RAZNOGO S4ISLENIA");
         }
         if (!isRoman(input1) && !isRoman(input2) && (!isStringInt(input1) || !isStringInt(input1))) {
-            throw new RuntimeException("Калькулятор должен принимать на вход числа от 1 до 10 включительно, не более или Калькулятор умеет работать только с целыми числами");
+            throw new RuntimeException("RIMSKIE ZIFRI VNE PREDELOV ili 4ISLA NE ZELIE");
         }
-
-
 
         int op1 = 0;
         int op2 = 0;
@@ -47,9 +45,8 @@ public class Validate {
             op2 = Integer.parseInt(String.valueOf(input2));
         }
 
-
         if (((op1 < 1) || (op1 > 10)) || ((op2 < 1) || (op2 > 10))) {
-            throw new RuntimeException("Калькулятор должен принимать на вход числа от 1 до 10 включительно, не более");
+            throw new RuntimeException("OPERANDI NE V PREDELAX");
         }
 
         if (isRoman(input1)) {
