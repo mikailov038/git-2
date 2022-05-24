@@ -80,6 +80,10 @@ public class ConvertRoman {
             return "в римской системе нет отрицательных чисел";
         String s = "";
 
+        while (input >= 100) {
+            s += "C";
+            input -= 100;
+        }
         while (input >= 90) {
             s += "XC";
             input -= 90;
