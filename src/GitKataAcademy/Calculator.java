@@ -12,7 +12,7 @@ public class Calculator {
         System.out.println("Input: ");
 
         Scanner scanner = new Scanner(System.in);
-
+//c
         String input1 = scanner.next();
         String operator = scanner.next();
         String input2 = scanner.next();
